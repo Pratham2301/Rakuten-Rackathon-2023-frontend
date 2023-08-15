@@ -10,15 +10,15 @@ function App() {
 
   const ques = [
     // "What is the occasion for which you need an outfit (casual, formal, party, etc)? This will help gauge the overall tone.",
-    "What is your personal style - classic, trendy, minimalist, etc? This will give a sense of your aesthetic.",
-    "Do you have any favorite colors or styles that you prefer wearing? Knowing color and silhouette preferences helps narrow options.",
-    "Do you have any specifications for fabrics like avoiding silk, preferring natural fabrics? Fabric choice makes a difference in comfort.",
-    "Do you need any specific type of outfit like a suit, dress, coords? This indicates whether you need a specific ensemble.",
-    "What is your budget range for this outfit? Budget helps manage cost expectations.",
-    "Will you need matching accessories? This determines if complementary items need consideration.",
+    "What is your <b>personal style</b> - classic, trendy, minimalist, etc? This will give a sense of your aesthetic.",
+    "Do you have any <b>favorite colors or styles</b> that you prefer wearing? Knowing color and silhouette preferences helps narrow options.",
+    "Do you have any <b>specifications for fabrics</b> like avoiding silk, preferring natural fabrics? Fabric choice makes a difference in comfort.",
+    "Do you need any <b>specific type of outfit</b> like a suit, dress, coords? This indicates whether you need a specific ensemble.",
+    "What is your <b>budget range</b> for this outfit? Budget helps manage cost expectations.",
+    "Will you need <b>matching accessories</b>? This determines if complementary items need consideration.",
     "Do you prefer loose-fitting clothes, a tailored fit, or something in between?",
     "Are you comfortable with wearing patterns and prints? If so, are there any particular patterns you like?",
-    " Are there any celebrities, fashion icons, or specific looks that inspire you?",
+    " Are there any <b>celebrities, fashion icons,</b> or specific looks that inspire you?",
     "Thank You!!!, Redirecting......",
   ]
 
@@ -30,7 +30,7 @@ function App() {
 
   const [messages, setMessages] = useState([
     {
-      message: "Welcome to flipkart!!! I am your assistant, What is the occasion for which you need an outfit (casual, formal, party, etc)? This will help gauge the overall tone.",
+      message: "Welcome to <b>Flipkart!!</b></br></br><b>I am Finoa your Fashion Assistant</b></br>What is the <b>occasion</b> for which you need an outfit (casual, formal, party, etc)? This will help gauge the overall tone.",
       sentTime: "just now",
       sender: "ChatGPT"
     }
