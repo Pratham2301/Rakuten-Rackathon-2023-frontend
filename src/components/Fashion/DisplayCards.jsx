@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './Cards';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
-import '../App.css'
+import './Styles.css'
 
 const DisplayCards = ({ imageLinks }) => {
 
