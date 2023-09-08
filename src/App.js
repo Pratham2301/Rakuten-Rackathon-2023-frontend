@@ -1,6 +1,4 @@
-
 // function App() {
-
 
 //   const ques = [
 //     "What is the occasion for which you need an outfit (casual, formal, party, etc)? This will help gauge the overall tone.",
@@ -30,7 +28,6 @@
 //     }
 //   ]);
 
-
 //   const [isTyping, setIsTyping] = useState(false);
 
 //   const [imgageLinks, setImageLinks] = useState([
@@ -42,9 +39,7 @@
 //   //   'https://github.githubassets.com/images/modules/profile/achievements/quickdraw-default.png',
 //   // ]);
 
-
 //   const callAPI = async () => {
-
 
 //     const queArr = [
 //       "basic data",
@@ -69,9 +64,6 @@
 //     console.log(ans);
 //     console.log(obj);
 
-
-
-
 //     axios.post('http://localhost:8000/q1', {
 //       prompt: obj
 //     })
@@ -83,13 +75,6 @@
 //       .catch(function (error) {
 //         console.log(error);
 //       });
-
-
-
-
-
-
-
 
 //     // api calling part...
 //     // setTimeout(() => {
@@ -105,11 +90,7 @@
 
 //   };
 
-
-
 //   const handleSend = async (message) => {
-
-
 
 //     setIsTyping(true);
 
@@ -126,14 +107,11 @@
 
 //     await SetCount(count + 1);
 
-
 //     const newMessages = [...messages, newMessage, botMessage];
 //     setMessages(newMessages);
 
-
 //     const newAnswer = [...ans, message];
 //     setAns(newAnswer);
-
 
 //     // console.log(count, ques.length);
 
@@ -143,8 +121,6 @@
 
 //     setIsTyping(false);
 //   };
-
-
 
 //   if (imgageLinks.length > 0) {
 //     return (
@@ -174,26 +150,43 @@
 //     );
 //   }
 
-
 // }
 
-import React from 'react'
-import FashionLanding from './components/Fashion/FashionLanding';
-import LandingPage from './components/Landing/LandingPage';
+import React from "react";
+import FashionLanding from "./components/Fashion/FashionLanding";
+import LandingPage from "./components/Landing/LandingPage";
 import { Route, Routes } from "react-router";
+import { useEffect } from "react";
 
-export default function App() {
+const App = () => {
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        autoDisplay: false,
+      },
+      "google_translate_element"
+    );
+  };
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
   return (
-    <div>
+    <>
+      <div id="google_translate_element"></div>
       <Routes>
         <Route excat path="/" element={<LandingPage />} />
         <Route excat path="/fashion" element={<FashionLanding />} />
         <Route excat path="/merch" element={<FashionLanding />} />
         <Route excat path="/ad" element={<FashionLanding />} />
-
       </Routes>
-    </div>
-  )
-}
-
-
+    </>
+  );
+};
+export default App;
