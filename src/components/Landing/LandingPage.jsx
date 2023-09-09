@@ -1,10 +1,9 @@
 import React from 'react'
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-/* import Lottie from "lottie-react";
-import technologyGuy from "../../Assets/techLottie.json";
-import knowlegdeLottie from "../../Assets/knowledgeLottie.json";
-import overallDevLottie from "../../Assets/overallDevLottie.json"; */
+import { Button, Stack } from '@mui/material';
+import './Landing.css'
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
     return (
@@ -14,9 +13,9 @@ export default function LandingPage() {
                 xs={11}
                 sx={{
                     my: "3%",
-                    padding:'5%',
-                    backgroundColor:'#c6e3fa',
-                    borderRadius:'5%'
+                    padding: '5%',
+                    backgroundColor: '#c6e3fa',
+                    borderRadius: '5%'
                 }}
             >
                 <Grid
@@ -56,7 +55,7 @@ export default function LandingPage() {
                                 fontSize: 30,
                             }}
                         >
-                            Your one stop Fashion Assistant
+                            Discover Outfits You'll Love
                         </Typography>
                         <Typography
                             sx={{
@@ -68,9 +67,14 @@ export default function LandingPage() {
                                 my: 2,
                             }}
                         >
-                            We believe that providing exposure to the students would help them
-                            to know new tech related innovations and help them to meet new
-                            tech enthusiast that would benefit them by gaining knowledge.
+                            Our intelligent chatbot gets to know your personal style and
+                            preferences, then generates outfit ideas you'll absolutely adore.
+                            Just let our bot know what you're looking for, like a casual dress
+                            or formal suit, and it will instantly generate customized options
+                            for you. See an outfit you love? Select it to refine the bot's
+                            suggestions so it continues learning your perfect fashion sense.
+                            Before you know it, you'll have a closet of stunning AI-generated
+                            outfits tailored just for you.
                         </Typography>
                     </Grid>
                     <Grid
@@ -151,11 +155,14 @@ export default function LandingPage() {
                                     },
                                 }}
                             >
-                                In the GFG Students chapter our primary goal is to impart
-                                knowledge and build a large network of passionate developers,
-                                programmers, coders and learners in the field of computer
-                                science and we aim to achieve the same by providing a platform
-                                to students to learn, build and enhance their skills.
+                                Express your unique spirit with AI-designed t-shirts printed
+                                and shipped straight to you. Our generative model creates
+                                one-of-a-kind tee designs based on your interests and desires.
+                                Botanical prints, abstract art, minimalist styles - if you can
+                                dream it, our AI will generate it onto the perfect tee for you.
+                                Once you've picked your fave new t-shirt design, we'll expertly
+                                print it and deliver it right to your door. Our print-on-demand
+                                service makes getting custom, creative tees easier than ever.
                             </Typography>
                         </div>
                     </Grid>
@@ -177,7 +184,7 @@ export default function LandingPage() {
                                     textAlign: "left",
                                 }}
                             >
-                                Advertisements
+                                AI-Powered Brand Advertising
                             </Typography>
                             <Typography
                                 sx={{
@@ -189,11 +196,14 @@ export default function LandingPage() {
                                     fontSize: 22,
                                 }}
                             >
-                                We aim to help students develop fine coding skills and reach the
-                                best of their potential. Grow students’ knowledge in the field
-                                in a peer-peer learning environment. Facilitate guidance and
-                                resources for internships, placement, and competitive exam
-                                preparation.
+                                Reach more customers and drive sales with our AI
+                                solution for advertising and social media. Our generative
+                                model helps you create mockups, prototypes, and ad concepts
+                                optimized for your brand and target audience. Save time and
+                                money while discovering winning new ideas. Whether you need
+                                product packaging, in-store displays, or eye-catching social
+                                content, our advertising AI generates on-brand creative in minutes.
+                                Let us handle the ideation so you can focus on growing your business.
                             </Typography>
                         </div>
                     </Grid>
@@ -209,9 +219,22 @@ export default function LandingPage() {
                         }}
                     >
                         <div className="div1" sx={{ padding: 5 }}>
-                            <img src="https://i.imgur.com/vuRWhlX.png" alt="Advertisements" srcset=""  style={{ width: '300px', height: '300px' }}/>
+                            <img src="https://i.imgur.com/vuRWhlX.png" alt="Advertisements" srcset="" style={{ width: '300px', height: '300px' }} />
                         </div>
                     </Grid>
+                </Grid>
+                <Grid className='Land'>
+                    <Stack direction="row" spacing={4}>
+                        <Link to='/fashion'>
+                            <Button variant="contained">Fashion Assistant</Button>
+                        </Link>
+                        <Link to='/merch'>
+                            <Button variant="contained">POD Assistant</Button>
+                        </Link>
+                        <Link to='/ad'>
+                            <Button variant="contained">Advertisement Assistant</Button>
+                        </Link>
+                    </Stack>
                 </Grid>
             </Grid>
         </Grid>

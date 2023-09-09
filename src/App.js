@@ -156,6 +156,10 @@ import React from "react";
 import FashionLanding from "./components/Fashion/FashionLanding";
 import LandingPage from "./components/Landing/LandingPage";
 import { Route, Routes } from "react-router";
+
+import MerchLanding from './components/Merch/MerchLanding';
+import AdLanding from './components/Advertisements/AdLanding';
+
 import { useEffect } from "react";
 
 const App = () => {
@@ -177,14 +181,16 @@ const App = () => {
     document.body.appendChild(addScript);
     window.googleTranslateElementInit = googleTranslateElementInit;
   }, []);
+
   return (
     <>
       <div id="google_translate_element"></div>
       <Routes>
         <Route excat path="/" element={<LandingPage />} />
         <Route excat path="/fashion" element={<FashionLanding />} />
-        <Route excat path="/merch" element={<FashionLanding />} />
-        <Route excat path="/ad" element={<FashionLanding />} />
+
+        <Route excat path="/merch" element={<MerchLanding />} />
+        <Route excat path="/ad" element={<AdLanding />} />
       </Routes>
     </>
   );
