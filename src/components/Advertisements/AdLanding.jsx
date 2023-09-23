@@ -29,8 +29,9 @@ export default function AdLanding() {
 
     const [isTyping, setIsTyping] = useState(false);
 
-    const [imgageLinks, setImageLinks] = useState([
+    const [imageLinks, setImageLinks] = useState([
     ]);
+    const [prompts, setPrompts] = useState("");
 
 
 
@@ -56,6 +57,7 @@ export default function AdLanding() {
         var final_prompt = `Create visually captivating, eyecatching, and impactful brand advertisements for a ${para} Brand Instagram campaign. The focus should be on our new ${para} Flavours, and the imagery should showcase ${para} hubs in a vintage setting. Use shades of different colours to infuse our brand identity into the visuals. The goal is to make viewers feel energized and eager to try our brand.`;
 
         console.log(final_prompt);
+        setPrompts(final_prompt);
 
         axios.post('http://localhost:8000/q2', {
             prompt: final_prompt
@@ -115,9 +117,9 @@ export default function AdLanding() {
         
     };
 
-    if (imgageLinks.length > 0) {
+    if (imageLinks.length > 0) {
         return (
-            <DisplayCard imageLinks={imgageLinks} />
+            <DisplayCard imageLinks={imageLinks} prompt={prompts}/>
         )
     }
     else {
